@@ -9,21 +9,34 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 
-<body>
-    <header class="container text-center">
+<body class="bg-dark">
+    <header class="container text-center text-white">
         <h1>Navegador de personajes de Dragon Ball</h1>
         <h3>En esta página podrás buscar a los personajes de la obra de Toriyama y acceder a información de los mismos</h3>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-dark bg-dark">
             <form class="form-inline container text-center">
-                <input class="form-control mr-sm-2" type="search" placeholder="Escriba aquí el nombre del personaje" aria-label="Search">
+                <div class="d-flex w-100 text-center gap-2">
+                <input id="input-busqueda" class="form-control me-2" type="search" placeholder="Escriba aquí el nombre del personaje" aria-label="Search">
                 <button class="btn btn-outline-success" type="button" id="btn-buscar" class="btn btn-primary">Buscar</button>
                 <button class="btn btn-outline-success" type="button" id="btn-limpiar" class="btn btn-primary">Limpiar</button>
+                </div>
             </form>
         </nav>
     </header>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
+     <div id="contenedor-data" class="row">
+        <!-- <div class="col-3 pb-2 d-flex justify-content-center">
+          <div class="card">
+            <img class="card-img-top" src="https://dragonball-api.com/characters/goku_normal.webp"/>
+            <div class="card-body">
+              <h5 class="card-title">Goku</h5>
+              <p class="card-text">Saiyan - Male</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 
 </html>
