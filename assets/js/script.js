@@ -26,7 +26,7 @@ const loadData = async (link) => {
     }
 };
 
-
+function mostrarTodo () {
 window.addEventListener("DOMContentLoaded", async () => {
     const data = await loadData(link);
     const dataPersonajes = data.items;
@@ -51,6 +51,8 @@ window.addEventListener("DOMContentLoaded", async () => {
       `;
     });
 });
+}
+mostrarTodo ();
 
 
 mainContainer.addEventListener("click", (e) => {
@@ -66,7 +68,8 @@ btnBuscar.addEventListener("click",  async () => {
     const consulta = busquedaInput.value.trim().toLowerCase();
 
     if (!consulta) {
-        alert("No se encontró a un personaje con ese nombre")
+        alert("Hubo un error en la búsqueda")
+        return mostrarTodo ();
     }
 
      const personaje = await buscarPersonaje(consulta);
